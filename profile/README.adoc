@@ -1,0 +1,25 @@
+image:../logo/uprotocol_logo.png[uProtocol, width=640]
+
+image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=https://opensource.org/licenses/Apache-2.0]
+
+== Why?
+
+* Automotive applications no longer run in a single heterogeneous environment but are instead https://www.techtarget.com/searchitoperations/definition/distributed-applications-distributed-apps[distributed] across multiple heterogeneous systems
+
+* Too steep of a learning curve for developers
+
+* Everyone talks their own `languages` (not just programming languages but communication protocols are very different from automotive-mechatronics, automotive-high-compute, IoT, Cloud, infrastructure, etc...)
+
+
+== What is Eclipse uProtocol?
+
+* The glue that binds different communication protocols (automotive, Internet, proprietary, etc...) together
+* Transport agnostic (you can run it over a link layer protocol, automotive application layer protocol, and anything in-between)
+* Ubiquitous language for discovery, subscription, messaging, and more, such that apps and services running on _any_ heterogeneous system can all talk the _same_ language
+
+Want to know more:
+
+* Watch the March 2023 Eclipse SDV Community Day videos (_coming soon..._)
+* checkout the https://docs.google.com/presentation/d/1yfJ_ynBGHQTcnG1GhyMQyhmO66KUdVEQN7UE24iNoeU/edit?usp=share_link[slides] from the Eclipse SDV event
+
+* Read the link:http://github.com/eclipse-uprotocol/uprotocol-spec[uProtocol Specifications]
