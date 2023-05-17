@@ -1,4 +1,4 @@
-image:../logo/uprotocol_logo.png[uProtocol, width=640]
+image:https://github.com/eclipse-uprotocol/.github/blob/main/logo/uprotocol_logo.png[uProtocol, width=640]
 
 image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=https://opensource.org/licenses/Apache-2.0]
 
