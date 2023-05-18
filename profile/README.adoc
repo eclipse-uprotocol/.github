@@ -4,16 +4,18 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 == Why?
 
-* Automotive applications no longer run in a single heterogeneous environment but are instead https://www.techtarget.com/searchitoperations/definition/distributed-applications-distributed-apps[distributed] across multiple heterogeneous systems
+* Vehicle software historically was developed & deployed into monolithic, static, standalone modules, this led to dificulties in updating the software and adding new features
 
-* Too steep of a learning curve for developers
+* Takes too long to develop and deploy these apps and services
 
-* Everyone talks their own `languages` (not just programming languages but communication protocols are very different from automotive-mechatronics, automotive-high-compute, IoT, Cloud, infrastructure, etc...)
+* Automotive software (applications & services) are no longer disconnected and static but https://www.techtarget.com/searchitoperations/definition/distributed-applications-distributed-apps[distributed] (across multiple heterogeneous environments), and dynamic 
+
+* There was no common language or means for these distributed environments to communicate with each other (missing the glue); ex. some use SOME/IP, others MQTT, DDS, proprietary transports, etc... 
 
 
 == What is Eclipse uProtocol?
 
-* The glue that binds different communication protocols (automotive, Internet, proprietary, etc...) together
+* _The_ glue that binds different communication protocols (automotive, Internet, proprietary, etc...) together
 * Transport agnostic (you can run it over a link layer protocol, automotive application layer protocol, and anything in-between)
 * Ubiquitous language for discovery, subscription, messaging, and more, such that apps and services running on _any_ heterogeneous system can all talk the _same_ language
 
