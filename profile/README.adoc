@@ -19,9 +19,8 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 * Transport agnostic (you can run it over a link layer protocol, automotive application layer protocol, and anything in-between)
 * Ubiquitous language for discovery, subscription, messaging, and more, such that apps and services running on _any_ heterogeneous system can all talk the _same_ language
 
-Want to know more:
+Would you like to learn more?
 
-* Watch the March 2023 Eclipse SDV Community Day videos (_coming soon..._)
-* checkout the https://docs.google.com/presentation/d/1yfJ_ynBGHQTcnG1GhyMQyhmO66KUdVEQN7UE24iNoeU/edit?usp=share_link[slides] from the Eclipse SDV event
+* Check out March 2023 Eclipse SDV Community Day https://www.youtube.com/watch?v=hvKfBJdR2UA[video1] https://www.youtube.com/watch?v=8oV7XoJ15uc[video2] https://docs.google.com/presentation/d/1yfJ_ynBGHQTcnG1GhyMQyhmO66KUdVEQN7UE24iNoeU/edit?usp=share_link[slides]
 
 * Read the link:http://github.com/eclipse-uprotocol/uprotocol-spec[uProtocol Specifications]
