@@ -4,7 +4,7 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 == Why?
 
-* Vehicle software historically was developed & deployed into monolithic, static, standalone modules, this led to dificulties in updating the software and adding new features
+* Vehicle software historically was developed & deployed into monolithic, static, standalone modules, this led to difficulties in updating the software and adding new features
 
 * Takes too long to develop and deploy these apps and services
 
