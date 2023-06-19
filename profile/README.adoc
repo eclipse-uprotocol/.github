@@ -38,4 +38,4 @@ uProtocol project has been split into multiple repositories as seen in <<project
 
 .Project Overview
 [project-overview]
-image:overview.drawio.svg[width=100%]
+image:https://github.com/eclipse-uprotocol/.github/blob/main/profile/overview.drawio.svg[width=100%]
