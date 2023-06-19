@@ -16,11 +16,26 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 == What is Eclipse uProtocol?
 
 * _The_ glue that binds different communication protocols (automotive, Internet, proprietary, etc...) together
-* Transport agnostic (you can run it over a link layer protocol, automotive application layer protocol, and anything in-between)
+* Transport agnostic (anything from OSI L2 up to L7 protocols and anything in between)
 * Ubiquitous language for discovery, subscription, messaging, and more, such that apps and services running on _any_ heterogeneous system can all talk the _same_ language
 
 Would you like to learn more?
 
-* Check out March 2023 Eclipse SDV Community Day https://www.youtube.com/watch?v=hvKfBJdR2UA[video1] https://www.youtube.com/watch?v=8oV7XoJ15uc[video2] https://docs.google.com/presentation/d/1yfJ_ynBGHQTcnG1GhyMQyhmO66KUdVEQN7UE24iNoeU/edit?usp=share_link[slides]
+* Check out March 2023 Eclipse SDV Community Day:
+  ** https://www.youtube.com/watch?v=hvKfBJdR2UA[Vision]
+  ** https://www.youtube.com/watch?v=8oV7XoJ15uc[Overview] https://docs.google.com/presentation/d/1yfJ_ynBGHQTcnG1GhyMQyhmO66KUdVEQN7UE24iNoeU/edit?usp=share_link[(slides)]
 
 * Read the link:http://github.com/eclipse-uprotocol/uprotocol-spec[uProtocol Specifications]
+
+## Projects
+uProtocol project has been split into multiple repositories as seen in <<project-overview>> to allow for easier maintenance and development. The following repositories are part of the uProtocol project:
+
+* *uprotocol-spec:* uProtocol specifications
+* *uprotocol-core-api:* uProtocol core interfaces that are common regardless of the programming language (i.e. Subscription management, discovery, etc...)
+* *uprotocol-sdk-*:* Language specific interfaces, datamodel, and helper classes
+* *uprotocol-platform-*:* Platform specific implementations of uProtocol (ex. Android, Linux, Cloud, Mobile, etc...)
+* *uprotocol-services-*:* Collection of services used to build applications footnote:[Service definition are not part of the protocol specification, but rather shown as examples for how to build applications using uProtocol]
+
+.Project Overview
+[project-overview]
+image:overview.drawio.svg[width=100%]
