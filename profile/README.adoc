@@ -35,7 +35,3 @@ uProtocol project has been split into multiple repositories as seen in <<project
 * *uprotocol-sdk-*:* Language specific interfaces, datamodel, and helper classes
 * *uprotocol-platform-*:* Platform specific implementations of uProtocol (ex. Android, Linux, Cloud, Mobile, etc...)
 * *uprotocol-services-*:* Collection of services used to build applications footnote:[Service definition are not part of the protocol specification, but rather shown as examples for how to build applications using uProtocol]
-
-.Project Overview
-[project-overview]
-image:https://github.com/eclipse-uprotocol/.github/blob/main/profile/overview.drawio.svg[width=100%]
