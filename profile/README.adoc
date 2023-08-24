@@ -27,11 +27,42 @@ Would you like to learn more?
 
 * Read the link:http://github.com/eclipse-uprotocol/uprotocol-spec[uProtocol Specifications]
 
-## Projects
-uProtocol project has been split into multiple repositories as seen in <<project-overview>> to allow for easier maintenance and development. The following repositories are part of the uProtocol project:
+## Eclipse Packages
+uProtocol project has been split into multiple repositories as can be seen in <<eclipse-packages>> below. to allow for easier maintenance and development. The following repositories are part of the uProtocol project:
 
-* *uprotocol-spec:* uProtocol specifications
-* *uprotocol-core-api:* uProtocol core interfaces that are common regardless of the programming language (i.e. Subscription management, discovery, etc...)
-* *uprotocol-sdk-*:* Language specific interfaces, datamodel, and helper classes
-* *uprotocol-platform-*:* Platform specific implementations of uProtocol (ex. Android, Linux, Cloud, Mobile, etc...)
-* *uprotocol-services-*:* Collection of services used to build applications footnote:[Service definition are not part of the protocol specification, but rather shown as examples for how to build applications using uProtocol]
+.Eclipse Packages and SDK
+[#eclipse-packages]
+image:https://raw.githubusercontent.com/eclipse-uprotocol/uprotocol-spec/main/uprotocol_sdk.drawio.svg[Eclipse Packages, width=100%]
+
+.Eclipse Packages
+[#eclipse-package-description,width=100%,cols="10%,35%,55%"]
+|===
+|Type | Package |Description
+
+| Spec.
+|https://github.com/eclipse-uprotocol/uprotocol-spec[uprotocol-spec]
+| Main uProtocol Specifications
+
+| SDK
+|https://github.com/eclipse-uprotocol/uprotocol-core-api[uprotocol-core-api]
+|Core uServices interface definitions that are consistent across programming languages and deployments of uProtocol (i.e. Subscription management, discovery, etc...)
+
+NOTE: Only service required to implement the specifications are included in this project.
+
+| SDK
+a|https://github.com/eclipse-uprotocol/uprotocol-sdk-java[uprotocol-sdk-java]
+
+https://github.com/eclipse-uprotocol/uprotocol-sdk-cpp[uprotocol-sdk-cpp]
+|Language specific interfaces, data model, and helper classes
+
+| Platform
+| https://github.com/eclipse-uprotocol/uprotocol-platform-android-api[uprotocol-platform-android-api]
+| uTransport implementations for a specific platform (ex. Android, Linux, Cloud, Mobile, etc...)
+
+| Platform
+|https://github.com/eclipse-uprotocol/uprotocol-platform-android-api[uprotocol-platform-android]
+|Implementations for a specific platform (ex. Android, Linux, Cloud, Mobile, etc...)
+
+|===
+
+NOTE: _Not all repositories are available yet_
