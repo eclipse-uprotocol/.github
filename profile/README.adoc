@@ -35,7 +35,7 @@ Would you like to learn more?
 In order to _Connect apps & services everywhere_, we need a number of building blocks (pieces of the uProtocol puzzle) each explained in <<uprotocol-puzzle-pieces>> below.  
 
 .uProtocol Puzzle Pieces
-[#uprotocol-puzzle-pieces, width=100%,cols="20%,47%,33%"]
+[#uprotocol-puzzle-pieces, width=100%,cols="20%,45%,35%",,options="header"]
 |===
 |Piece |Description |Projects
 
@@ -82,6 +82,3 @@ a|
 * https://github.com/eclipse-uprotocol/uprotocol-core-api[uprotocol-core-api]
 
 |===
-
-
-NOTE: _More to come, contributions welcome!_
