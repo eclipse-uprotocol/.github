@@ -6,7 +6,7 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 * Vehicle software traditionally has been deployed into monolithic, static, standalone modules (components) each with their own complex software development processes. These standalone components are often build as a black box by vendors making the process to update them by OEMs difficult to say the least
 
-* Features and functionality no longer bound to a single module but are https://www.techtarget.com/searchitoperations/definition/distributed-applications-distributed-apps[distributed] across multiple heterogeneous systems and environments that each haev their own development (and deployment) ecosystem). 
+* Features and functionality no longer bound to a single module but are https://www.techtarget.com/searchitoperations/definition/distributed-applications-distributed-apps[distributed] across multiple heterogeneous systems/environments each with their own development (and deployment) ecosystem. 
 
 * These new applications require continuous development update (no longer static) to add value to customers for many years 
 
@@ -35,12 +35,12 @@ Would you like to learn more?
 In order to _Connect apps & services everywhere_, we need a number of building blocks (pieces of the uProtocol puzzle) each explained in <<uprotocol-puzzle-pieces>> below.  
 
 .uProtocol Puzzle Pieces
-[#uprotocol-puzzle-pieces, width=100%,cols="20%,45%,35%",,options="header"]
+[#uprotocol-puzzle-pieces, width=100%,cols="20%,40%,40%",options="header"]
 |===
 |Piece |Description |Projects
 
 | *Specifications*
-| Requirements that define the protocols and all the other building blocks (think of it as the instruction manaual for putting the puzzle together) 
+| Requirements that define the protocols and all the other building blocks (think of it as the instruction manual for putting the puzzle together) 
 a|
 * https://github.com/eclipse-uprotocol/uprotocol-spec[uprotocol-spec]
 * https://github.com/eclipse-uprotocol/uprotocol-core-api[uprotocol-core-api]
@@ -57,6 +57,7 @@ a|
 * https://github.com/eclipse-uprotocol/uprotocol-cpp[uprotocol-cpp]
 * https://github.com/eclipse-uprotocol/uprotocol-python[uprotocol-python]
 * https://github.com/eclipse-uprotocol/uprotocol-rust[uprotocol-rust]
+* https://github.com/eclipse-uprotocol/uprotocol-kotlin[uprotocol-kotlin]
 
 |*Transports*
 | Underlining communication mechanisms for uEs to talk to each other, written for a specific programming language and for a given platform.
