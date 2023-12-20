@@ -17,13 +17,37 @@ NOTE: The above is not unique to automotive, others face similar challenges (mil
 
 == What is Eclipse uProtocol?
 
-* _The_ glue that binds different communication protocols together
+A communication protocol that allows apps and services to connect and communicate with each other in a common way regardless of the underlining messaging middleware they run on. Apps and services could be running on the same or different heterogeneous system(s) (uPlatforms), but what remains consistent is the developers mental model for building these apps and services (i.e. APIs & data models).
 
-* Transport agnostic (anything from OSI L2 up to L7 protocols and anything in between)
+== How does it work?
+Key principles of uProtocol:
 
-* Ubiquitous language for discovery, subscription, messaging, and more, such that apps and services running on _any_ heterogeneous system can all talk the _same_ language
+- Unified service addressing scheme (uri and specific related to this)
+- Supporting fundamental design patterns of rpc and pub/sub, with key properties:
+  - Attachment to messages (and automatic transfer of attachments from publisher to subscriber)
+  - Permission management
+  - Priority management
+- Well-defined APIs formalized in protobuf for accessing services
+- Developers access services by using generated code from protobuf definitions:
+- Code generation is specific to language
+- Code generation relies on underlying APIs (packaged in a library called ulink) that are framework-dependent: 
+  - uTransport: Send/receive messages
+  - RpcClient: Manages client side rpc request-2-response pairing
+  - RpcServer: Registers handlers to process requests
+- Same subscription API across all platforms, formalized as a service itself (uSubscription service) where the subscription flows across platform/transport boundaries automatically
+  - Implementation may be custom to a given platform (not relying on generated code)
 
-Would you like to learn more?
+.SDK Overview
+image:../overview.drawio.svg[Overview, width=500]
+
+Protocol implementation is split up into the following logical components:
+
+- *Core API (uprotocol-core-api):* Project containing the core uProtocol interfaces and data models (defined in protos) that are shared across all programming languages
+- *Language Specific SDKs (ex. uprotocol-java):* Contain language specific uProtocol interfaces, data models (not defined in protos), and helper classes/functions
+- *uLink Libraries(ex. uprotocol-java-ulink-android):* Implementations of the various uProtocol interfaces (per language) to connect apps and services to each other and a given uPlatform technology
+- *uPlatforms (ex. uprotocol-platform-android):* Runtime environment for a given heterogeneous system that contains implementation of the core uProtocol services (uDiscovery, uSubscription, uTwin), along with event dispatchers (uStreamer) to connect uPlatforms to each other
+
+To learn more:
 
 * Check out March 2023 Eclipse SDV Community Day:
   ** https://www.youtube.com/watch?v=hvKfBJdR2UA[Vision]
