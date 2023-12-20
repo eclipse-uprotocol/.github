@@ -39,6 +39,7 @@ Key principles of uProtocol:
 
 === Software Development Kit (SDK)
 The uProtocol SDK, shown in <<sdk>> below, is used by developers to build apps and services (uEs) for a given platform. The building blocks of the SDK can be found in <<sdk-components>>.
+
 .SDK Overview
 image:../overview.drawio.svg[sdk, width=600]
 
