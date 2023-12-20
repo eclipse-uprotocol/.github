@@ -59,8 +59,8 @@ image:../overview.drawio.svg[sdk, width=600]
 
 |===
 
-
-The runtime environment for the applications and services is called uPlatform. Platforms contain the contains core services (uDiscovery, uSubscription, uTwin) and event dispatchers (uStreamer) required to implement the protocol as seen in <<uprotocol-platform>> below.
+=== uPlatforms
+uPlatforms, shown in <<uprotocol-platform>>, are the applications and services runtime environments per heterogeneous system. uPlatforms contain the core services (uDiscovery, uSubscription, uTwin) and platform-2-platform event dispatchers (uStreamer) required to realize the pub/sub and RPC design patterns across the different communication middlewares and runtime environments.
 
 image:../uplatform.drawio.svg[uprotocol-platform, width=400]
 
