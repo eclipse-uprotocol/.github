@@ -4,20 +4,28 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 == Why?
 
-* Vehicle software traditionally has been deployed into monolithic, static, standalone modules (components) each with their own complex software development processes. These standalone components are often build as a black box by vendors making the process to update them by OEMs difficult to say the least
+The automotive industry faces a number of challenges related to software communication:
 
-* Features and functionality no longer bound to a single module but are https://www.techtarget.com/searchitoperations/definition/distributed-applications-distributed-apps[distributed] across multiple heterogeneous systems/environments each with their own development (and deployment) ecosystem. 
+* In-vehicle communication is largely inherited from legacy architectures that were mostly based on CAN networks. In addition to mechatronics software for which the exisitng infrastructure was developed, vehicles now include multiple powerful SoCs that run massive amounts of software. This software requires new communications mechanisms.
 
-* These new applications require continuous development update (no longer static) to add value to customers for many years 
+* Vehicles are now connected to the cloud and other devices (e.g. mobile), and this connectivity requires a communication mechanism that can guarrantee properties such as recovery from loss of connection and secure data transmission, driving yet different requirements on the communications framework
 
-* There exists many automotive, Internet, etc.. communication protocols each with their own benefits and use cases however they don't play well with each other (no common way to have applications talking in one protocol communicate to another) 
+* Access to vehicle data from the cloud, and sharing of this data in the cloud, drives yet other requirements such as scaling and reliability
+
+* Despite having varying requirements, all above requirements aim at transferring the same vehicle-related data, and end up being served by the same software components running that produce the data
+
+* Defining specific communication patterns for each and every "environment" drives redundant work, complexity and probable incompatibilities.
+
+uProtocol addresses these challenges by providing a small number of communication patterns, exposed with set of programming APIs available and consistent across the vehicle eco-system (in-vehicle ECUs, cloud and mobile), enabling seemless communication between applications and services, whereever they are hosted. Using uProtocol, application developers can focus on the functionality they need to develop, rather than the plumbing necessary to access the relevant services they require, and service providers develop their service once for all consumers, wherever they are hosted.
+
+Many communications frameworks exist, partially covering the automotive needs described above. Rather than developing its own implementation (which is also an option), uProtocol's approach is to "map" its APIs to existing frameworks, and ensure interoperability across them. This approach enables to use and combine multiple communcations frameworks, while ensuring end-to-end communication between software components.
 
 NOTE: The above is not unique to automotive, others face similar challenges (military, aviation, rail, etc...)
 
 
 == What is Eclipse uProtocol?
 
-A communication protocol that enables a consistent mental model for developers for building apps and services that can connect & communicate with each other in a regardless of the underlining messaging middleware they use or runtime they are deployed on. 
+A communication protocol that enables developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware
 
 == How does it work?
 Key principles of uProtocol:
@@ -33,7 +41,7 @@ Key principles of uProtocol:
 * Code generation relies on underlying APIs (packaged in a library called uLink) that are framework-dependent: 
   ** uTransport: Send/receive messages over a given messaging middleware (a.k.a transport)
   ** RpcClient: Manages client side rpc request-2-response pairing
-  ** RpcServer: Registers handlers to process requests
+  ** RpcServer: Registers handlers to process incoming rpc requests
 * Same subscription API across all platforms, formalized as a service itself (uSubscription service) where the subscription flows across platforms and across different transports automatically
   * Implementation may be custom to a given platform (not relying on generated code)
 
@@ -56,12 +64,12 @@ image:../overview.drawio.svg[sdk, width=600]
 | Contain language specific uProtocol interfaces, data models (not defined in protos), and helper classes/functions
 
 | *uLink Library* (ex. https://github.com/eclipse-uprotocol/uprotocol-java-ulink-android[uprotocol-java-ulink-android])
-| Implementations of the various uProtocol interfaces (per language) to connect apps and services to each other and a given uPlatform technology
+| Framework-specific implementations of the various uProtocol interfaces (per language) to connect apps and services to each other for a given uPlatform technology
 
 |===
 
-=== uPlatforms
-uPlatforms, shown in <<uprotocol-platform>>, are the applications and services runtime environments per heterogeneous system. uPlatforms contain the core services (uDiscovery, uSubscription, uTwin) and platform-2-platform event dispatchers (uStreamer) required to realize the pub/sub and RPC design patterns across the different communication middlewares and runtime environments.
+=== uPlatform
+uPlatform, shown in <<uprotocol-platform>>, is the implementation of uProtocol core services, the ability to locally connect apps and services as well as the ability to route messages to/from other uPlatforms. It contains the core services (uDiscovery, uSubscription, uTwin) and platform-2-platform event dispatchers (uStreamer) required to realize the pub/sub and RPC design patterns across the different communication middlewares and runtime environments.
 
 image:../uplatform.drawio.svg[uprotocol-platform, width=400]
 
