@@ -50,7 +50,7 @@ The uProtocol SDK, shown in <<sdk>> below, is used by developers to build apps a
 
 .SDK Overview
 [#sdk]
-image:overview.drawio.svg[width=600]
+image:https://raw.githubusercontent.com/eclipse-uprotocol/uprotocol-spec/main/uprotocol_sdk.drawio.svg[width=600]
 
 
 .SDK Components
@@ -74,7 +74,7 @@ uPlatform, shown in <<uprotocol-platform>>, is the implementation of uProtocol c
 
 .uPlatform
 [#uprotocol-platform]
-image:uplatform.drawio.svg[width=400]
+image:https://raw.githubusercontent.com/eclipse-uprotocol/uprotocol-spec/main/uplatform.drawio.svg[width=400]
 
 To learn more:
 
