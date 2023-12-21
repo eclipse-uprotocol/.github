@@ -6,26 +6,26 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 The automotive industry faces a number of challenges related to software communication:
 
-* In-vehicle communication is largely inherited from legacy architectures that were mostly based on CAN networks. In addition to mechatronics software for which the exisitng infrastructure was developed, vehicles now include multiple powerful SoCs that run massive amounts of software. This software requires new communications mechanisms.
+* In-vehicle communication is largely inherited from legacy architectures that were mostly based on CAN networks. In addition to mechatronics software for which the existing infrastructure was developed, vehicles now include multiple powerful SoCs that run massive amounts of software. This software requires new communications mechanisms.
 
-* Vehicles are now connected to the cloud and other devices (e.g. mobile), and this connectivity requires a communication mechanism that can guarrantee properties such as recovery from loss of connection and secure data transmission, driving yet different requirements on the communications framework
+* Vehicles are now connected to the cloud and other devices (e.g. mobile), and this connectivity requires a communication mechanism that can guarantee properties such as recovery from loss of connection and secure data transmission, driving yet different requirements on the communications framework
 
 * Access to vehicle data from the cloud, and sharing of this data in the cloud, drives yet other requirements such as scaling and reliability
 
 * Despite having varying requirements, all above requirements aim at transferring the same vehicle-related data, and end up being served by the same software components running that produce the data
 
-* Defining specific communication patterns for each and every "environment" drives redundant work, complexity and probable incompatibilities.
+* Defining specific communication patterns for each and every "environment" drives redundant work, complexity and probable incompatibilities
 
-uProtocol addresses these challenges by providing a small number of communication patterns, exposed with set of programming APIs available and consistent across the vehicle eco-system (in-vehicle ECUs, cloud and mobile), enabling seemless communication between applications and services, whereever they are hosted. Using uProtocol, application developers can focus on the functionality they need to develop, rather than the plumbing necessary to access the relevant services they require, and service providers develop their service once for all consumers, wherever they are hosted.
+uProtocol addresses these challenges by providing a small number of communication patterns, exposed with set of programming APIs available and consistent across the vehicle eco-system (in-vehicle ECUs, cloud and mobile), enabling seamless communication between applications and services, wherever they are hosted. Using uProtocol, application developers can focus on the functionality they need to develop, rather than the plumbing necessary to access the relevant services they require, and service providers develop their service once for all consumers, wherever they are hosted.
 
-Many communications frameworks exist, partially covering the automotive needs described above. Rather than developing its own implementation (which is also an option), uProtocol's approach is to "map" its APIs to existing frameworks, and ensure interoperability across them. This approach enables to use and combine multiple communcations frameworks, while ensuring end-to-end communication between software components.
+Many communications frameworks exist, partially covering the automotive needs described above. Rather than developing its own implementation (which is also an option), uProtocol's approach is to "map" its APIs to existing frameworks, and ensure interoperability across them. This approach enables to use and combine multiple communication frameworks, while ensuring end-to-end communication between software components.
 
 NOTE: The above is not unique to automotive, others face similar challenges (military, aviation, rail, etc...)
 
 
 == What is Eclipse uProtocol?
 
-A communication protocol that enables developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware
+A communication protocol that enables developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware.
 
 == How does it work?
 Key principles of uProtocol:
@@ -49,11 +49,12 @@ Key principles of uProtocol:
 The uProtocol SDK, shown in <<sdk>> below, is used by developers to build apps and services (uEs) for a given platform. The building blocks of the SDK can be found in <<sdk-components>>.
 
 .SDK Overview
-image:../overview.drawio.svg[sdk, width=600]
+[#sdk]
+image:overview.drawio.svg[width=600]
 
 
 .SDK Components
-[sdk-components,width="80%",cols="30%,70%",options="header"]
+[#sdk-components,width="80%",cols="30%,70%",options="header"]
 |===
 | Component | Description
 
@@ -71,7 +72,9 @@ image:../overview.drawio.svg[sdk, width=600]
 === uPlatform
 uPlatform, shown in <<uprotocol-platform>>, is the implementation of uProtocol core services, the ability to locally connect apps and services as well as the ability to route messages to/from other uPlatforms. It contains the core services (uDiscovery, uSubscription, uTwin) and platform-2-platform event dispatchers (uStreamer) required to realize the pub/sub and RPC design patterns across the different communication middlewares and runtime environments.
 
-image:../uplatform.drawio.svg[uprotocol-platform, width=400]
+.uPlatform
+[#uprotocol-platform]
+image:uplatform.drawio.svg[width=400]
 
 To learn more:
 
