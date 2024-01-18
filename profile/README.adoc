@@ -48,39 +48,32 @@ Key principles of uProtocol:
 === uProtocol Libraries
 The uProtocol Libraries, shown in <<libraries>> below, is used by developers to build apps and services (uEs) for a given uProtocol implementation (Android, Zenoh-Linux, etc...). The purpose for each library  is found in  <<library-components>>.
 
-.Client Library
+.Libraries
 [#libraries]
-image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/up_libraries.drawio.svg[width=800]
+image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/up_libraries.drawio.svg[width=700]
 
 
 .Components
-[#library-components,width="80%",cols="30%,70%",options="header"]
+[#library-components,width="100%",cols="20%,80%"]
 |===
 | Library | Description
 
-| *uPClient* (ex. https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java])
-| The main client-facing library used to connect & communication to an implementation of uProtocol written in a given programming language. The library enables SW developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware
+| *uPClient* 
+| The main client-facing library applications and services use to connect & communication to an implementation of uProtocol written in a given programming language. The library enables SW developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware. There is one of these libraries per combination of programming language and implementation. Examples: https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java], https://github.com/eclipse-uprotocol/up-client-zenoh-rust[up-client-zenoh-rust], etc...
 
-| *Core API* (https://github.com/eclipse-uprotocol/up-core-api[up-core-api])
-| Interfaces for the core uServices (uDiscovery, uSubscription, uTwin) that is common to all uProtocol implementations, as well as the complete protocol data models that are shared across all programming languages (declared in proto files)
 
-| *Language Specific* (ex. https://github.com/eclipse-uprotocol/up-java[up-java])
-| Extension of the Core API library to provide builders, serializers, and validators for the uProtocol data model, as well as the layer 1 & 2 language specific interfaces
+| https://github.com/eclipse-uprotocol/up-core-api[*Core API*]
+| Declaration of the common core uProtocol uServices (uDiscovery, uSubscription, uTwin), and data model that is consistent across programming languages and implementations (_declare once, use everywhere!_)
 
+| *Language Specific*
+| Language specific extension of the Core API library to provide builders, serializers, and validators for the uProtocol data model, as well as the layer 1 & 2 language specific interfaces definitions. Examples: (ex. https://github.com/eclipse-uprotocol/up-java[up-java]), (ex. https://github.com/eclipse-uprotocol/up-rust[up-rust]), etc...
 
 |===
 
+
 === uProtocol Implementations
-<<up-implementation>> below illustrates the components that are required for all implementations of uProtocol (the core services & dispatchers). .
+uProtocol implementation (shown <<up-implementation>> below) is a runtime environment that applications and services can be deployed to. The implementation requires a key set of services and components to be able to discover, connect, and communicate with other applications/services, anywhere.
 
 .uProtocol Implementation
 [#up-implementation]
 image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/implementation.drawio.svg[width=400]
-
-To learn more:
-
-* Check out March 2023 Eclipse SDV Community Day:
-  ** https://www.youtube.com/watch?v=hvKfBJdR2UA[Vision]
-  ** https://www.youtube.com/watch?v=8oV7XoJ15uc[Overview] https://docs.google.com/presentation/d/1yfJ_ynBGHQTcnG1GhyMQyhmO66KUdVEQN7UE24iNoeU/edit?usp=share_link[(slides)]
-
-* Read the link:http://github.com/eclipse-uprotocol/uprotocol-spec[uProtocol Specifications]
