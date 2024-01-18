@@ -45,36 +45,37 @@ Key principles of uProtocol:
 * Same subscription API across all platforms, formalized as a service itself (uSubscription service) where the subscription flows across platforms and across different transports automatically
   * Implementation may be custom to a given platform (not relying on generated code)
 
-=== Software Development Kit (SDK)
-The uProtocol SDK, shown in <<sdk>> below, is used by developers to build apps and services (uEs) for a given platform. The building blocks of the SDK can be found in <<sdk-components>>.
+=== uProtocol Libraries
+The uProtocol Libraries, shown in <<libraries>> below, is used by developers to build apps and services (uEs) for a given uProtocol implementation (Android, Zenoh-Linux, etc...). The purpose for each library  is found in  <<library-components>>.
 
-.SDK Overview
-[#sdk]
-image:https://raw.githubusercontent.com/eclipse-uprotocol/uprotocol-spec/main/uprotocol_sdk.drawio.svg[width=600]
+.Client Library
+[#libraries]
+image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/up_libraries.drawio.svg[width=800]
 
 
-.SDK Components
-[#sdk-components,width="80%",cols="30%,70%",options="header"]
+.Components
+[#library-components,width="80%",cols="30%,70%",options="header"]
 |===
-| Component | Description
+| Library | Description
 
-| *uProtocol Core API* (https://github.com/eclipse-uprotocol/uprotocol-core-api[uprotocol-core-api])
-| Project containing the core uProtocol interfaces and data models (defined in protos) that are shared across all programming languages
+| *uPClient* (ex. https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java])
+| The main client-facing library used to connect & communication to an implementation of uProtocol written in a given programming language. The library enables SW developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware
 
-| *Language Specific SDKs* (ex. https://github.com/eclipse-uprotocol/uprotocol-java[uprotocol-java])
-| Contain language specific uProtocol interfaces, data models (not defined in protos), and helper classes/functions
+| *Core API* (https://github.com/eclipse-uprotocol/up-core-api[up-core-api])
+| Interfaces for the core uServices (uDiscovery, uSubscription, uTwin) that is common to all uProtocol implementations, as well as the complete protocol data models that are shared across all programming languages (declared in proto files)
 
-| *uLink Library* (ex. https://github.com/eclipse-uprotocol/uprotocol-java-ulink-android[uprotocol-java-ulink-android])
-| Framework-specific implementations of the various uProtocol interfaces (per language) to connect apps and services to each other for a given uPlatform technology
+| *Language Specific* (ex. https://github.com/eclipse-uprotocol/up-java[up-java])
+| Extension of the Core API library to provide builders, serializers, and validators for the uProtocol data model, as well as the layer 1 & 2 language specific interfaces
+
 
 |===
 
-=== uPlatform
-uPlatform, shown in <<uprotocol-platform>>, is the implementation of uProtocol core services, the ability to locally connect apps and services as well as the ability to route messages to/from other uPlatforms. It contains the core services (uDiscovery, uSubscription, uTwin) and platform-2-platform event dispatchers (uStreamer) required to realize the pub/sub and RPC design patterns across the different communication middlewares and runtime environments.
+=== uProtocol Implementations
+<<up-implementation>> below illustrates the components that are required for all implementations of uProtocol (the core services & dispatchers). .
 
-.uPlatform
-[#uprotocol-platform]
-image:https://raw.githubusercontent.com/eclipse-uprotocol/uprotocol-spec/main/uplatform.drawio.svg[width=400]
+.uProtocol Implementation
+[#up-implementation]
+image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/implementation.drawio.svg[width=400]
 
 To learn more:
 
