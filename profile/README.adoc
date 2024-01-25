@@ -28,47 +28,29 @@ NOTE: The above is not unique to automotive, others face similar challenges (mil
 A communication protocol that enables developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware.
 
 == How does it work?
-Key principles of uProtocol:
+*Key principles of uProtocol:*
 
 * Unified service addressing scheme (uri and specific related to this)
 * Supporting fundamental design patterns of rpc and pub/sub, with key properties:
   ** Attachment to messages (and automatic transfer of attachments from publisher to subscriber)
-  ** Permission management
-  ** Priority management
+  ** Permission & priority management
 * Well-defined APIs formalized in protobuf for accessing services
 * Developers access services by using generated code from protobuf definitions:
-* Code generation is specific to language
-* Code generation relies on underlying APIs (packaged in a library called uLink) that are framework-dependent: 
-  ** uTransport: Send/receive messages over a given messaging middleware (a.k.a transport)
-  ** RpcClient: Manages client side rpc request-2-response pairing
-  ** RpcServer: Registers handlers to process incoming rpc requests
+  ** Code generation is specific to language
+* Protocol is layered to make it easy for developers to use and implement
 * Same subscription API across all platforms, formalized as a service itself (uSubscription service) where the subscription flows across platforms and across different transports automatically
-  * Implementation may be custom to a given platform (not relying on generated code)
+  ** Implementation may be custom to a given platform (not relying on generated code)
 
-=== uProtocol Libraries
-The uProtocol Libraries, shown in <<libraries>> below, is used by developers to build apps and services (uEs) for a given uProtocol implementation (Android, Zenoh-Linux, etc...). The purpose for each library  is found in  <<library-components>>.
+=== uProtocol Client Library (uPClient)
+uPClient library is the *only* client-facing library that application and service developers require to connect & communication to an <<uProtocol Implementation>>. 
 
-.Libraries
-[#libraries]
+The library is written for a given programming language, ex. https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java], https://github.com/eclipse-uprotocol/up-client-zenoh-rust[up-client-zenoh-rust], etc...
+
+<<projects>> below shows how uPClient library relates to the language specific library (used by all uPClient libraries of the same programming language) and Core-API library that defines the uProtocol interfaces and data models .
+
+.uProtocol Projects
+[#projects]
 image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/up_libraries.drawio.svg[width=700]
-
-
-.Components
-[#library-components,width="100%",cols="20%,80%"]
-|===
-| Library | Description
-
-| *uPClient* 
-| The main client-facing library applications and services use to connect & communication to an implementation of uProtocol written in a given programming language. The library enables SW developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware. There is one of these libraries per combination of programming language and implementation. Examples: https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java], https://github.com/eclipse-uprotocol/up-client-zenoh-rust[up-client-zenoh-rust], etc...
-
-
-| https://github.com/eclipse-uprotocol/up-core-api[*Core API*]
-| Declaration of the common core uProtocol uServices (uDiscovery, uSubscription, uTwin), and data model that is consistent across programming languages and implementations (_declare once, use everywhere!_)
-
-| *Language Specific*
-| Language specific extension of the Core API library to provide builders, serializers, and validators for the uProtocol data model, as well as the layer 1 & 2 language specific interfaces definitions. Examples: (ex. https://github.com/eclipse-uprotocol/up-java[up-java]), (ex. https://github.com/eclipse-uprotocol/up-rust[up-rust]), etc...
-
-|===
 
 
 === uProtocol Implementations
