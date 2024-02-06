@@ -4,7 +4,7 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 == Why?
 
-The automotive industry faces a number of challenges related to software communication:
+Many industries face a number of challenges related to software communication:
 
 * In-vehicle communication is largely inherited from legacy architectures that were mostly based on CAN networks. In addition to mechatronics software for which the existing infrastructure was developed, vehicles now include multiple powerful SoCs that run massive amounts of software. This software requires new communications mechanisms.
 
@@ -21,7 +21,6 @@ uProtocol addresses these challenges by providing a small number of communicatio
 Many communications frameworks exist, partially covering the automotive needs described above. Rather than developing its own implementation (which is also an option), uProtocol's approach is to "map" its APIs to existing frameworks, and ensure interoperability across them. This approach enables to use and combine multiple communication frameworks, while ensuring end-to-end communication between software components.
 
 NOTE: The above is not unique to automotive, others face similar challenges (military, aviation, rail, etc...)
-
 
 == What is Eclipse uProtocol?
 
@@ -59,3 +58,9 @@ uProtocol implementation (shown <<up-implementation>> below) is a runtime enviro
 .uProtocol Implementation
 [#up-implementation]
 image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/implementation.drawio.svg[width=400]
+
+
+== How to Get Involved
+* Join the https://accounts.eclipse.org/mailing-list/uprotocol-dev[uprotocol-dev@eclipse.org] mailing list
+* Join https://join.slack.com/t/sdvworkinggroup/shared_invite/zt-27dk1cref-XeS_dCe6h0918q~k6qU_CQ[SDV Working Group Slack Channel]
+* Subscribe to the https://calendar.google.com/calendar/u/0?cid=Y18yYW1waTJibW9rYTNxdGVyNGRjZWFwMWQ1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t[SDV Community Calendar] to get invites to the weekly/bi-weekly uProtocol related meetings
