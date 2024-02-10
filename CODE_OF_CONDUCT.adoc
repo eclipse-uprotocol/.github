@@ -1,0 +1,25 @@
+# Code of Conduct
+
+The uProtocol project follows the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct].
+
+
+## Committer Code of Conduct
+An https://www.eclipse.org/projects/handbook/#roles-cm[Eclipse Committer] holds plays an important role to ensure ensure contributions from others (and themselves) follow the vision and mission of the project. The following sections we will outline the additional responsibilities and expectations of an Eclipse-uProtocol committer from that defined in https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook].
+
+
+### Nomination
+In addition to the requirements outlined in https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook], the uProtocol contributor must also:
+
+* _Actively_ participate in weekly/bi-weekly project meetings
+* Has and will make _significant_ contributions in one of the <<area-of-expertise>> below
+* Contributes (code, reviews, discussions) to the specification and core API projects
+
+[#area-of-expertise]
+### Committer's Area of Expertise
+Given that large scope of the project, we choose committers who can help maintain the various areas defined below:
+
+1. **Specifications** (up-spec, up-core-api): Ensuring the vision/mission of the project is upheld, process is followed, and the specifications are maintained and updated.
+2. **Programming language:** Experts in a particular language and can help to review and comment on contributions for a given language
+3. **Implementation:** Experts in a particular implementation (ex. Android, Zenoh, Sommr/SOME/ip, Cloud, etc...)
+
+NOTE: The above list is not exhaustive and can be updated as the project evolves. Additionally it is strongly encouraged that committers participate in more than one area defined above (multiple languages, implementations, specifications, etc...).
