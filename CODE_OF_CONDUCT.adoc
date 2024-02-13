@@ -1,25 +1,47 @@
 # Code of Conduct
 
-The uProtocol project follows the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct].
+The uProtocol project follows the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct] and https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]. These two resources should be read before continuing. .
+
+Below we define addition code of conduct and responsibilities of committers and project leads. 
+
+NOTE: Any violations to this code of conduct should be reported to the project lead and/or the Eclipse Foundation.
 
 
-## Committer Code of Conduct
-An https://www.eclipse.org/projects/handbook/#roles-cm[Eclipse Committer] holds plays an important role to ensure ensure contributions from others (and themselves) follow the vision and mission of the project. The following sections we will outline the additional responsibilities and expectations of an Eclipse-uProtocol committer from that defined in https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook].
-
-
-### Nomination
-In addition to the requirements outlined in https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook], the uProtocol contributor must also:
-
-* _Actively_ participate in weekly/bi-weekly project meetings
-* Has and will make _significant_ contributions in one of the <<area-of-expertise>> below
-* Contributes (code, reviews, discussions) to the specification and core API projects
+## Committers
+https://www.eclipse.org/projects/handbook/#roles-cm[Eclipse-uProtocol Committer] holds plays a vital role to ensure ensure contributions from others (and themselves) follow the vision and mission of the project, and adhere to this code of conduct. 
+In the next section we will elaborate on their expected area of expertise and responsibilities, along with how committers are nominated and retired.
 
 [#area-of-expertise]
 ### Committer's Area of Expertise
-Given that large scope of the project, we choose committers who can help maintain the various areas defined below:
+Committers are chosen based on merit and the area of expertise that they can steward (maintain). List below is not exhaustive and shall update as the project evolves:
 
-1. **Specifications** (up-spec, up-core-api): Ensuring the vision/mission of the project is upheld, process is followed, and the specifications are maintained and updated.
-2. **Programming language:** Experts in a particular language and can help to review and comment on contributions for a given language
-3. **Implementation:** Experts in a particular implementation (ex. Android, Zenoh, Sommr/SOME/ip, Cloud, etc...)
+1. **Specifications** (up-spec, up-core-api): Ensuring the vision/mission of the project is upheld, process is followed, and the specifications are maintained and updated. Concerns are discussed and addressed w.r.t backwards compatibility support and new features.
+2. **Programming language:** Experts in a particular language who help to review and comment on contributions for a given supported language (Java, Kotlin, Rust, C++, Python, etc...)
+3. **Implementation:** Experts in a particular implementation of uProtocol (ex. Android, Zenoh, Sommr/SOME/ip, Cloud, etc...)
 
-NOTE: The above list is not exhaustive and can be updated as the project evolves. Additionally it is strongly encouraged that committers participate in more than one area defined above (multiple languages, implementations, specifications, etc...).
+NOTE: Committers are strongly encouraged to contribute in more than one area defined above.
+
+
+### Responsibilities
+Additional R&R of a uProtocol committers are as follows:
+
+* _Actively_ participate in weekly/bi-weekly project meetings
+* Makes _significant_ contributions in at least one of the <<area-of-expertise>> above
+* Contributes (code, reviews, discussions) to the specification and core API projects
+
+
+### Nomination
+Contributors are nominated by either the project lead or another committer per the https://www.eclipse.org/projects/handbook/#elections-committer[Eclipse Committer Nomination Process]. Eclipse-uProtocol committers *MUST* be performing <<Responsibilities>> outlined above for a minimum of 3 months and can commit to the role for a minimum of 12 months.
+
+
+### Retirement
+Per https://www.eclipse.org/projects/handbook/#elections-retire-cm[Eclipse Foundation Handbook], Committers may retire for one of the following reasons:
+
+1. Their own volition
+2. By the project lead
+
+All communication regarding committer retirement and nominations, *MUST* be sent to the uprotocol-dev@eclipse.org mailing list.
+
+
+## Project Lead
+In addition to what is defined in https://www.eclipse.org/projects/handbook/#roles-pl[Project Lead] section of the Eclipse Foundation Handbook, a project lead *MUST* also be a committers as defined above.
