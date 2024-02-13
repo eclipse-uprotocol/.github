@@ -1,6 +1,6 @@
 # Code of Conduct
 
-The uProtocol project follows the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct] and https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]. These two resources should be read before continuing. .
+The uProtocol project follows the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct] and https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]. These two resources should be read before continuing.
 
 Below we define addition code of conduct and responsibilities of committers and project leads. 
 
@@ -8,7 +8,7 @@ NOTE: Any violations to this code of conduct should be reported to the project l
 
 
 ## Committers
-https://www.eclipse.org/projects/handbook/#roles-cm[Eclipse-uProtocol Committer] holds plays a vital role to ensure ensure contributions from others (and themselves) follow the vision and mission of the project, and adhere to this code of conduct. 
+https://www.eclipse.org/projects/handbook/#roles-cm[Eclipse-uProtocol Committers] play a vital role to ensure ensure contributions from others (and themselves) follow the vision and mission of the project, and adhere to this code of conduct. 
 In the next section we will elaborate on their expected area of expertise and responsibilities, along with how committers are nominated and retired.
 
 [#area-of-expertise]
@@ -23,7 +23,7 @@ NOTE: Committers are strongly encouraged to contribute in more than one area def
 
 
 ### Responsibilities
-Additional R&R of a uProtocol committers are as follows:
+Additional roles and responsibilities of a uProtocol committers are as follows:
 
 * _Actively_ participate in weekly/bi-weekly project meetings
 * Makes _significant_ contributions in at least one of the <<area-of-expertise>> above
@@ -44,4 +44,4 @@ All communication regarding committer retirement and nominations, *MUST* be sent
 
 
 ## Project Lead
-In addition to what is defined in https://www.eclipse.org/projects/handbook/#roles-pl[Project Lead] section of the Eclipse Foundation Handbook, a project lead *MUST* also be a committers as defined above.
+In addition to what is defined in https://www.eclipse.org/projects/handbook/#roles-pl[Project Lead] section of the Eclipse Foundation Handbook, a project lead *MUST* also be a committer as defined above.
