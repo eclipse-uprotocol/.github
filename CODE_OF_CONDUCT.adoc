@@ -1,10 +1,8 @@
 # Code of Conduct
 
-The uProtocol project follows the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct] and https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]. These two resources should be read before continuing.
+The Eclipse-uProtocol project is intended to be used in production environments (for automotive and other use cases). In order to ensure the project is well maintained and supported, we have outlined additional expectations for committers and project leads than what is currently defined in the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct] and https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]. Although many of them are intuitive, we ask that you read and understand them.
 
-Below we define addition code of conduct and responsibilities of committers and project leads. 
-
-NOTE: Any violations to this code of conduct should be reported to the project lead and/or the Eclipse Foundation.
+We also aim to run the project in an open and fair manner where contributions are encouraged from all companies and individuals.if you notice any violations to this code of conduct, please contact the project lead and/or the Eclipse Foundation Management Office (EMO).
 
 
 ## Committers
@@ -31,14 +29,14 @@ Additional roles and responsibilities of a uProtocol committers are as follows:
 
 
 ### Nomination
-Contributors are nominated by either the project lead or another committer per the https://www.eclipse.org/projects/handbook/#elections-committer[Eclipse Committer Nomination Process]. Eclipse-uProtocol committers *MUST* be performing <<Responsibilities>> outlined above for a minimum of 3 months and can commit to the role for a minimum of 12 months.
+Contributors are nominated by either the project lead or another committer per the https://www.eclipse.org/projects/handbook/#elections-committer[Eclipse Committer Nomination Process].
 
 
 ### Retirement
 Per https://www.eclipse.org/projects/handbook/#elections-retire-cm[Eclipse Foundation Handbook], Committers may retire for one of the following reasons:
 
 1. Their own volition
-2. By the project lead
+2. By the project lead (with supporting justification)
 
 All communication regarding committer retirement and nominations, *MUST* be sent to the uprotocol-dev@eclipse.org mailing list.
 
