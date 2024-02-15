@@ -1,8 +1,15 @@
 # Code of Conduct
 
-The Eclipse-uProtocol project is intended to be used in production environments (for automotive and other use cases). In order to ensure the project is well maintained and supported, we have outlined additional expectations for committers and project leads than what is currently defined in the https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct] and https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]. Although many of them are intuitive, we ask that you read and understand them.
+The Eclipse-uProtocol project is intended to be used in production environments (for automotive and other use cases). In order to ensure the project is well maintained and supported, we have outlined additional expectations for committers and project leads than what is currently defined in the following the Eclipse Resources:
 
-We also aim to run the project in an open and fair manner where contributions are encouraged from all companies and individuals.if you notice any violations to this code of conduct, please contact the project lead and/or the Eclipse Foundation Management Office (EMO).
+- https://raw.githubusercontent.com/eclipse/.github/master/CODE_OF_CONDUCT.md[Eclipse Code of Conduct]
+- https://www.eclipse.org/projects/handbook/[Eclipse Foundation Handbook]
+- https://gitlab.eclipse.org/eclipsefdn/emo-team/policies/legal-faqs/-/blob/main/documents/src/adoc/committers-dd.adoc[ Eclipse Committer Due Diligence Guidelines]
+
+Although many of the items discussed in this document is intuitive, we ask that you read and understand them anyways.
+
+
+We (the committers) aim to run this project in an open and fair manner where contributions are encouraged from all companies and individuals. If you happen to notice any violations to this code of conduct, please contact the project lead and/or the Eclipse Foundation Management Office (EMO).
 
 
 ## Committers
