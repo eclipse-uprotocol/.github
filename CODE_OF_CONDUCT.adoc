@@ -17,7 +17,7 @@ https://www.eclipse.org/projects/handbook/#roles-cm[Eclipse-uProtocol Committers
 
 * Contribute to specifications by providing feedback, code contributions in up-spec, up-core-api repos
 * Ensure all contributors (including themselves) adhere to this code of conduct, the Eclipse Foundation Handbook, and the vision & mission of the project
-* Make _significant_ code contributions to multiple repositories in the Eclipse-uProtocol project
+* Make _significant_ code contributions to one or more repositories in the Eclipse-uProtocol project
 * Review and provide feedback to pull requests from other contributors
 * _Actively_ participate in weekly/bi-weekly project meetings
 
