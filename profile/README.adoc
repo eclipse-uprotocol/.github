@@ -43,24 +43,15 @@ A communication protocol that enables developers to build apps and services that
 === uProtocol Client Library (uPClient)
 uPClient library is the *only* client-facing library that application and service developers require to connect & communication to an <<uProtocol Implementation>>. 
 
-The library is written for a given programming language, ex. https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java], https://github.com/eclipse-uprotocol/up-client-zenoh-rust[up-client-zenoh-rust], etc...
+uPClient libraries are easy to locate, they have the name `up-client-<IMPLEMENTATION>-<LANGUAGE>`, example https://github.com/eclipse-uprotocol/up-client-android-java[up-client-android-java], https://github.com/eclipse-uprotocol/up-client-zenoh-rust[up-client-zenoh-rust], etc...
 
-<<projects>> below shows how uPClient library relates to the language specific library (used by all uPClient libraries of the same programming language) and Core-API library that defines the uProtocol interfaces and data models .
-
-.uProtocol Projects
-[#projects]
-image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/up_libraries.drawio.svg[width=700]
+If you notice a language or implementation missing when you search below, and you would like to add one, check out <<How to Get Involved>> section below.
 
 
 === uProtocol Implementations
-uProtocol implementation (shown <<up-implementation>> below) is a runtime environment that applications and services can be deployed to. The implementation requires a key set of services and components to be able to discover, connect, and communicate with other applications/services, anywhere.
+Implementation of the protocol (ex. android, zenoh, someip, mqtt), contain the building blocks of core services to enable application/service to discover, publish/subscribe, and send RPC commands to each other over the same communication technology (i.e transport).
 
-.uProtocol Implementation
-[#up-implementation]
-image:https://raw.githubusercontent.com/eclipse-uprotocol/up-spec/main/implementation.drawio.svg[width=400]
-
+A streamers (component of an implementation), bridges the different implementations together so that applications and services can then seamlessly discover and communicate with each other regardless of the underlining transport.
 
 == How to Get Involved
-* Join the https://accounts.eclipse.org/mailing-list/uprotocol-dev[uprotocol-dev@eclipse.org] mailing list
-* Join https://join.slack.com/t/sdvworkinggroup/shared_invite/zt-27dk1cref-XeS_dCe6h0918q~k6qU_CQ[SDV Working Group Slack Channel]
-* Subscribe to the https://calendar.google.com/calendar/u/0?cid=Y18yYW1waTJibW9rYTNxdGVyNGRjZWFwMWQ1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t[SDV Community Calendar] to get invites to the weekly/bi-weekly uProtocol related meetings
+* To learn more about how to contribute to uProtocol, please checkout  https://github.com/eclipse-uprotocol/.github/CONTRIBUTING.adoc[How to Contribute to uProtocol]
