@@ -82,6 +82,7 @@ branch_protection_rules: [
 ** `CONTRIBUTING.adoc` *MUST* link to this document
 ** `CODE_OF_CONDUCT.adoc` *MUST* link to https://github.com/eclipse-uprotocol/.github/CODE_OF_CONDUCT.adoc
 ** `README.adoc` *MUST* Clearly document how to build and use your software
+** `SECURITY.adoc` *MUST* link to https://github.com/eclipse-uprotocol/.github/SECURITY.adoc
 
 * *SHOULD NOT* contain `CONTRIBUTORS.adoc` as the information can be fetched from the git history
 
