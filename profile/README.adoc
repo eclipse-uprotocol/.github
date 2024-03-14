@@ -54,4 +54,4 @@ Implementation of the protocol (ex. android, zenoh, someip, mqtt), contain the b
 A streamers (component of an implementation), bridges the different implementations together so that applications and services can then seamlessly discover and communicate with each other regardless of the underlining transport.
 
 == How to Get Involved
-* To learn more about how to contribute to uProtocol, please checkout  https://github.com/eclipse-uprotocol/.github/CONTRIBUTING.adoc[How to Contribute to uProtocol]
+* To learn more about how to contribute to uProtocol, please checkout  https://github.com/eclipse-uprotocol/.github/blob/main/CONTRIBUTING.adoc[How to Contribute to uProtocol]
