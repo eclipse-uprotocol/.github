@@ -44,13 +44,13 @@ A communication protocol that enables developers to build apps and services that
 
 1. *Pick a Programming Language:* To build applications and services (uEs) that uses uProtocol, you'll first need to pick a programming languages, such as: https://github.com/eclipse-uprotocol/up-rust[Rust], https://github.com/eclipse-uprotocol/up-java[Java], https://github.com/eclipse-uprotocol/up-cpp[C++], https://github.com/eclipse-uprotocol/up-python[Python], and https://github.com/eclipse-uprotocol/up-kotlin[Kotlin]. Each library contains a `README` that will explain how to build and use uProtocol for their programming language.
 
-2. *Pick a Transport:* Next you'll need to decide the communication middleware (transports) your uE will run on top of, some options are SOME/IP, MQTT, zenoh, android (binder), etc...  Check out the list of projects below to find a combination of language and transport that suits your needs, if you don't find one, we would love a contribution back :-).
+2. *Pick a Transport:* Next you'll need to decide the communication middleware (transports) your uE will run on top of, some options are Eclipse Zenoh, SOME/IP, MQTT 5, Android (Binder), etc...  Check out the list of projects below to find a combination of language and transport that suits your needs, if you don't find one, we would love a contribution back :-).
 
 3. *Setup a Deployment:* Finally, to run your uE, you'll need set of additional core services running in your system. The core services, such as uSubscription, uDiscovery, etc... are required to complete the protocol and connect your application/service to other implementations (i.e. to connect your Android system with a Linux implementation, connect to the cloud, etc...). 
 
-NOTE: We are working on step-by-step guides for the last step so that development and deployment of uProtocol uEs will be a simple as possible. 
+NOTE: We are working on step-by-step guides for the last step so that development and deployment of uProtocol uEs will be as simple as possible. 
 
-If you really want to know how it all works, feel free to browse the https://github.com/eclipse-uprotocol/up-spec[Specifications]
+If you want to know all the details of how it works, feel free to browse the https://github.com/eclipse-uprotocol/up-spec[Specifications]
 
 === How to Get Involved?
 * If you would like to contribute to Eclipse-uProtocol (additional transports, languages, specifications, core services, etc...) take a look at https://github.com/eclipse-uprotocol/up-spec/blob/main/CONTRIBUTING.adoc[How to Contribute to uProtocol]
