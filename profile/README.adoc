@@ -4,7 +4,7 @@ image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License,link=ht
 
 == Why?
 
-Many industries face a number of challenges related to software communication:
+The automotive industry faces a number of challenges related to software communication:
 
 * In-vehicle communication is largely inherited from legacy architectures that were mostly based on CAN networks. In addition to mechatronics software for which the existing infrastructure was developed, vehicles now include multiple powerful SoCs that run massive amounts of software. This software requires new communications mechanisms.
 
@@ -16,27 +16,29 @@ Many industries face a number of challenges related to software communication:
 
 * Defining specific communication patterns for each and every "environment" drives redundant work, complexity and probable incompatibilities
 
-uProtocol addresses these challenges by providing a small number of communication patterns, exposed with set of programming APIs available and consistent across the vehicle eco-system (in-vehicle ECUs, cloud and mobile), enabling seamless communication between applications and services, wherever they are hosted. Using uProtocol, application developers can focus on the functionality they need to develop, rather than the plumbing necessary to access the relevant services they require, and service providers develop their service once for all consumers, wherever they are hosted.
+uProtocol addresses these challenges by providing a small number of communication patterns, exposed with a set of programming APIs available and consistent across the vehicle eco-system (in-vehicle ECUs, cloud and mobile). This approach enables seamless communication between applications and services, wherever they are hosted. Using uProtocol, application developers can focus on the functionality they need to develop, rather than the plumbing necessary to access the relevant services they require, and service providers develop their service once for all consumers, wherever they are hosted.
 
-Many communications frameworks exist, partially covering the automotive needs described above. Rather than developing its own implementation (which is also an option), uProtocol's approach is to "map" its APIs to existing frameworks, and ensure interoperability across them. This approach enables to use and combine multiple communication frameworks, while ensuring end-to-end communication between software components.
+Multiple communication mechanisms have been developed over the years, each solving specific problems: SOME/IP for in-vehicle inter-ECU communication, MQTT for IoT-to-Cloud communication, Linux IPC variants for intra-SoC communication, Binder for Android IPC, etc. A connected vehicle system will require multiple of these systems, creating the challenge of bridging them together. Rather than trying to develop a new, "more universal" protocol, uProtocol's approach is to "map" its APIs to existing frameworks, and ensure interoperability across them. This approach enables to use and combine multiple communication frameworks, while ensuring end-to-end communication between software components.
 
 NOTE: The above is not unique to automotive, others face similar challenges (military, aviation, rail, etc...)
 
 == What is Eclipse uProtocol?
 
-A communication protocol that enables developers to build apps and services that communicate seamlessly across one of multiple inter-connected messaging middleware.
+A communication protocol enabling developers to build apps and services that communicate seamlessly across one or multiple inter-connected messaging middleware.
 
 == How does it work?
 *Key principles of uProtocol:*
 
 * Unified service addressing scheme (uri and specific related to this)
-* Supporting fundamental design patterns of rpc and pub/sub, with key properties:
+** Using the standard uri scheme (rfc3986)
+** Location-independent mechanism to access services withouut knowledge of where they are specifically hosted
+* Supporting fundamental design patterns of rpc,  pub/sub and notification, with key properties:
   ** Attachment to messages (and automatic transfer of attachments from publisher to subscriber)
   ** Permission & priority management
 * Well-defined APIs formalized in protobuf for accessing services
 * Developers access services by using generated code from protobuf definitions:
   ** Code generation is specific to language
-* Protocol is layered to make it easy for developers to use and implement
+* Protocol is layered to make it easy for developers to use and implement, and also facilitate adding support for new languages and transport mechanisms
 * Same subscription API across all platforms, formalized as a service itself (uSubscription service) where the subscription flows across platforms and across different transports automatically
   ** Implementation may be custom to a given platform (not relying on generated code)
 
@@ -51,7 +53,7 @@ If you notice a language or implementation missing when you search below, and yo
 === uProtocol Implementations
 Implementation of the protocol (ex. android, zenoh, someip, mqtt), contain the building blocks of core services to enable application/service to discover, publish/subscribe, and send RPC commands to each other over the same communication technology (i.e transport).
 
-A streamers (component of an implementation), bridges the different implementations together so that applications and services can then seamlessly discover and communicate with each other regardless of the underlining transport.
+A streamer (component of an implementation), bridges between different implementations so that applications and services can seamlessly discover and communicate with each other regardless of the underlying transport mechanisms that need to be involved in the transfer of messages between apps and services.
 
 == How to Get Involved
 * To learn more about how to contribute to uProtocol, please checkout  https://github.com/eclipse-uprotocol/up-spec/blob/main/CONTRIBUTING.adoc [How to Contribute to uProtocol]
